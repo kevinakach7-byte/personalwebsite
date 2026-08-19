@@ -3,8 +3,84 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Blog — Kevin Akach</title>
+<title>Blog — Kevin Akach, Founder of ParagonAI Labs</title>
+<meta name="description" content="Notes from Kevin Akach on building ParagonAI Labs, running Clawcruit (AI hiring) and Clawforge Premier League (a simulated AI benchmark league), and what an accounting background teaches about running a venture.">
+<meta name="robots" content="index, follow">
+<meta name="author" content="Kevin Akach">
+<link rel="canonical" href="https://kevinakach.gt.tc/blog.html">
+<meta name="theme-color" content="#2F5233">
+
+<!-- Open Graph -->
+<meta property="og:type" content="blog">
+<meta property="og:site_name" content="Kevin Akach — Ledger">
+<meta property="og:title" content="Blog — Kevin Akach, Founder of ParagonAI Labs">
+<meta property="og:description" content="Notes on building ParagonAI Labs, running Clawcruit and Clawforge Premier League, and whatever else is on the desk.">
+<meta property="og:url" content="https://kevinakach.gt.tc/blog.html">
+<meta property="og:image" content="https://kevinakach.gt.tc/assets/og-cover.jpg">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:site" content="@AkachKevin_">
+<meta name="twitter:title" content="Blog — Kevin Akach, Founder of ParagonAI Labs">
+<meta name="twitter:description" content="Notes on building ParagonAI Labs, running Clawcruit and Clawforge Premier League, and whatever else is on the desk.">
+<meta name="twitter:image" content="https://kevinakach.gt.tc/assets/og-cover.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="styles.css">
+
+<!-- Structured data: Blog + each BlogPosting -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Blog",
+      "@id": "https://kevinakach.gt.tc/blog.html#blog",
+      "url": "https://kevinakach.gt.tc/blog.html",
+      "name": "Kevin Akach — Blog",
+      "author": { "@id": "https://kevinakach.gt.tc/#person" },
+      "publisher": { "@id": "https://kevinakach.gt.tc/#person" }
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://kevinakach.gt.tc/blog.html#post-1",
+      "headline": "Why I built Clawcruit: hiring shouldn't take weeks",
+      "url": "https://kevinakach.gt.tc/blog.html#post-1",
+      "datePublished": "2026-07-01",
+      "author": { "@id": "https://kevinakach.gt.tc/#person" },
+      "publisher": { "@id": "https://kevinakach.gt.tc/#person" },
+      "isPartOf": { "@id": "https://kevinakach.gt.tc/blog.html#blog" },
+      "about": "Clawcruit",
+      "description": "On the gap between needing a role filled and actually filling it, and why Clawcruit exists to close that gap with AI hires that onboard in about a minute."
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://kevinakach.gt.tc/blog.html#post-2",
+      "headline": "What accounting taught me about running a venture",
+      "url": "https://kevinakach.gt.tc/blog.html#post-2",
+      "datePublished": "2026-06-15",
+      "author": { "@id": "https://kevinakach.gt.tc/#person" },
+      "publisher": { "@id": "https://kevinakach.gt.tc/#person" },
+      "isPartOf": { "@id": "https://kevinakach.gt.tc/blog.html#blog" },
+      "about": "Accounting & Finance",
+      "description": "How an Accounting & Finance foundation shapes product and pricing decisions at ParagonAI Labs, from usage-based pricing to knowing when the numbers say 'not yet'."
+    },
+    {
+      "@type": "BlogPosting",
+      "@id": "https://kevinakach.gt.tc/blog.html#post-3",
+      "headline": "Building a season simulator: rules before randomness",
+      "url": "https://kevinakach.gt.tc/blog.html#post-3",
+      "datePublished": "2026-06-01",
+      "author": { "@id": "https://kevinakach.gt.tc/#person" },
+      "publisher": { "@id": "https://kevinakach.gt.tc/#person" },
+      "isPartOf": { "@id": "https://kevinakach.gt.tc/blog.html#blog" },
+      "about": "Clawforge Premier League",
+      "description": "Why the Clawforge Premier League season engine was built rules-first — team strength ratings, fixtures, then a match-result function — before layering in randomness."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -14,7 +90,7 @@
     <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks">MENU</button>
     <ul class="nav-links" id="navLinks">
       <li><a href="index.html#about">About</a></li>
-      <li><a href="index.html#projects">Projects</a></li>
+      <li><a href="index.html#ventures">Ventures</a></li>
       <li><a href="index.html#resume">Resume</a></li>
       <li><a href="blog.html">Blog</a></li>
       <li><a href="index.html#contact">Contact</a></li>
@@ -22,17 +98,19 @@
   </div>
 </nav>
 
+<main>
+
 <header class="hero" style="padding: 64px 0 48px;">
   <div class="wrap">
-    <div class="eyebrow">Ledger No. 2026 — Notes Journaled</div>
+    <div class="tag">Ledger No. 2026 — Notes Journaled</div>
     <h1 style="font-size: clamp(32px, 5vw, 44px);">Blog</h1>
     <p class="lede">Notes on building ParagonAI Labs, running Clawcruit and CPL, and whatever else is on the desk.</p>
   </div>
 </header>
 
-<section id="post-1" style="border-bottom: 1px solid var(--line);">
+<article id="post-1" style="border-bottom: 1px solid var(--line); padding: 76px 0;">
   <div class="wrap">
-    <div class="eyebrow">Entry 01 — Jul 2026</div>
+    <div class="tag">Entry 01 — <time datetime="2026-07-01">Jul 2026</time></div>
     <h2>Why I built Clawcruit: hiring shouldn't take weeks</h2>
     <div class="about-body">
       <p>Every founder hits the same wall eventually: a role needs filling, and filling it properly means weeks of job posts, interviews, and onboarding — while salary and opportunity cost run in the background regardless. That gap is what Clawcruit exists to close.</p>
@@ -40,29 +118,31 @@
       <p>The part I'm proudest of is the "sovereign brain" — three editable Markdown files that define identity, business knowledge, and role-specific workflow for each hire. It means the knowledge stays with the business, fully readable and editable, instead of vanishing into a black box.</p>
     </div>
   </div>
-</section>
+</article>
 
-<section id="post-2" style="border-bottom: 1px solid var(--line);">
+<article id="post-2" style="border-bottom: 1px solid var(--line); padding: 76px 0;">
   <div class="wrap">
-    <div class="eyebrow">Entry 02 — Jun 2026</div>
+    <div class="tag">Entry 02 — <time datetime="2026-06-15">Jun 2026</time></div>
     <h2>What accounting taught me about running a venture</h2>
     <div class="about-body">
       <p>An Accounting &amp; Finance foundation isn't the background people expect from someone founding an AI company, but it's turned out to be the most useful thing I carry into it. Every product decision is, underneath, a resource-allocation decision — and that's a language I already spoke before I wrote a line of product spec.</p>
       <p>It shows up in small ways: pricing Clawcruit around usage rather than seats, because that's how the underlying compute cost actually behaves. It shows up in big ways too — knowing when a venture's numbers say "not yet" even when the enthusiasm says "now."</p>
     </div>
   </div>
-</section>
+</article>
 
-<section id="post-3" style="border-bottom: none;">
+<article id="post-3" style="padding: 76px 0;">
   <div class="wrap">
-    <div class="eyebrow">Entry 03 — Jun 2026</div>
+    <div class="tag">Entry 03 — <time datetime="2026-06-01">Jun 2026</time></div>
     <h2>Building a season simulator: rules before randomness</h2>
     <div class="about-body">
       <p>When I started the Clawforge Premier League engine, the instinct was to reach for randomness first — roll a die, get a score. That produces results, but not a league that feels like it has a logic to it. The better approach: define the rules exhaustively before you let anything vary.</p>
       <p>Concretely, that meant building team strength ratings, a fixture generator, and a match-result function in that order — each deterministic and testable on its own — before layering in the randomness that makes a season interesting to watch. Randomness applied on top of firm rules reads as drama. Randomness applied first just reads as noise.</p>
     </div>
   </div>
-</section>
+</article>
+
+</main>
 
 <footer>
   <div class="wrap" style="display:flex; justify-content:space-between; width:100%; flex-wrap:wrap; gap:12px;">

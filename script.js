@@ -31,15 +31,57 @@ const revealObserver = new IntersectionObserver((entries) => {
 
 revealTargets.forEach(el => revealObserver.observe(el));
 
-// ---------- Contact form (placeholder — no backend wired) ----------
+// ---------- Contact form (Formspree AJAX) ----------
 const contactForm = document.getElementById('contactForm');
 const formNote = document.getElementById('formNote');
+const formSubmitBtn = contactForm ? contactForm.querySelector('button[type="submit"]') : null;
 
 if (contactForm) {
-  contactForm.addEventListener('submit', (e) => {
+  contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
-    formNote.textContent = 'Form captured locally — connect a service like Formspree to actually send this.';
-    formNote.style.color = 'var(--accent)';
+
+    if (formSubmitBtn) {
+      formSubmitBtn.disabled = true;
+      formSubmitBtn.textContent = 'Sending…';
+    }
+    if (formNote) {
+      formNote.textContent = '';
+    }
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: { 'Accept': 'application/json' }
+      });
+
+      if (response.ok) {
+        contactForm.reset();
+        if (formNote) {
+          formNote.textContent = "Message sent — I'll get back to you soon.";
+          formNote.style.color = 'var(--forge)';
+        }
+      } else {
+        const data = await response.json().catch(() => null);
+        const message = data && data.errors
+          ? data.errors.map(err => err.message).join(', ')
+          : 'Something went wrong — please try again or reach out via LinkedIn/X instead.';
+        if (formNote) {
+          formNote.textContent = message;
+          formNote.style.color = 'var(--flag)';
+        }
+      }
+    } catch (err) {
+      if (formNote) {
+        formNote.textContent = 'Network error — please try again or reach out via LinkedIn/X instead.';
+        formNote.style.color = 'var(--flag)';
+      }
+    } finally {
+      if (formSubmitBtn) {
+        formSubmitBtn.disabled = false;
+        formSubmitBtn.textContent = 'Send message';
+      }
+    }
   });
 }
 

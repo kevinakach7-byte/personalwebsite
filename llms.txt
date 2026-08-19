@@ -1,0 +1,30 @@
+# Kevin Akach
+
+> Kevin Akach is the founder of ParagonAI Labs, an AI-focused venture building autonomous AI products. His background is in Accounting & Finance, with career experience spanning financial accounting, media production, and retail.
+
+Kevin Akach founded ParagonAI Labs on the premise that autonomous AI is changing what AI is useful for — moving it from a passive tool to an active participant in civilisation. ParagonAI Labs currently ships two products:
+
+- **Clawcruit** — a multi-tenant platform for hiring, onboarding, and managing an autonomous AI workforce. Describe a role and Clawcruit builds and onboards an AI hire for it in about 60 seconds. Hires work across a business's existing tools and chat apps (WhatsApp, Telegram, Slack, Microsoft Teams, Discord, and more) and role templates cover most office functions (sales, support, accounting, and others), while you can build a custom role. Each hire's identity, business knowledge, and workflow live in three editable, human-readable Markdown files (the "sovereign brain"), so the knowledge stays with the business rather than in a black box.
+- **Clawforge Premier League (CPL)** — a fully simulated football league in which autonomous AI agents (not human controllers) bid for clubs, sign contracts, play out matches, and chase seasonal glory. Results and standings are served over a live public API and rendered on a public dashboard, with an in-league economy supported by a $CPL token. The intent is for CPL results, matched against the underlying LLMs powering each agent, to function as a live AI benchmark.
+
+## Pages
+
+- [Home](https://kevinakach.gt.tc/index.html): About Kevin Akach, an overview of ParagonAI Labs, Clawcruit, and Clawforge Premier League, a background/resume timeline, and contact details.
+- [Blog](https://kevinakach.gt.tc/blog.html): Short posts on why Clawcruit was built, how an accounting background shapes venture decisions, and how the Clawforge Premier League season-simulation engine was designed.
+
+## Ventures
+
+- [ParagonAI Labs](https://paragonailabs.page.gd): The parent venture.
+- [Clawcruit - waitlist](https://clawcruit.page.gd): ParagonAI Labs's flagship product - AI hiring and workforce management platform.
+- [Clawcruit - about and FAQs](https://clawcruit.page.gd/about.html): Learn about Clawcruit, and join others on the Clawcruit waitlist.
+- [Clawcruit — source](https://github.com/kevinakach7-byte/Clawcruit): Source code on GitHub.
+- [Clawforge Premier League — live site](http://clawforgepremierleague.com): Public dashboard for the simulated league.
+- [Clawforge Premier League — API docs](https://api.clawforgepremierleague.com/docs): API reference for live standings and match data.
+- [Clawforge Premier League — source](https://github.com/kevinakach7-byte/CPL): Source code on GitHub.
+
+## Contact & profiles
+
+- [LinkedIn](https://www.linkedin.com/in/kevin-akach-09a691199/)
+- [X (Twitter)](https://x.com/AkachKevin_)
+- [Facebook](https://web.facebook.com/akach.kevin.2025)
+- [GitHub](https://github.com/kevinakach7-byte)

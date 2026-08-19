@@ -59,6 +59,7 @@ img { max-width: 100%; display: block; }
   background: var(--forge);
   display: inline-block;
 }
+.tag time { color: inherit; }
 
 /* ---------- Nav ---------- */
 .site-nav {
@@ -98,8 +99,8 @@ img { max-width: 100%; display: block; }
 .btn-solid:hover, .btn-solid:focus-visible { background: var(--ink); border-color: var(--ink); }
 
 /* ---------- Section base ---------- */
-section { padding: 76px 0; border-bottom: 1px solid var(--line); }
-section h2 { font-family: var(--display); font-weight: 550; font-size: 29px; margin: 0 0 28px; }
+section, main > article { padding: 76px 0; border-bottom: 1px solid var(--line); }
+section h2, main > article h2 { font-family: var(--display); font-weight: 550; font-size: 29px; margin: 0 0 28px; }
 .section-lead { color: var(--muted); max-width: 60ch; margin: -12px 0 32px; }
 
 /* ---------- About ---------- */

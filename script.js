@@ -17,7 +17,7 @@ if (navToggle && navLinks) {
 }
 
 // ---------- Scroll reveal ----------
-const revealTargets = document.querySelectorAll('section, .exhibit-card');
+const revealTargets = document.querySelectorAll('section, article, .exhibit-card');
 revealTargets.forEach(el => el.classList.add('reveal'));
 
 const revealObserver = new IntersectionObserver((entries) => {
